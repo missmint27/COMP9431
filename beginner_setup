@@ -1,0 +1,41 @@
+Step 1. SSH TurtleBot3
+      $ssh <TurtleBot3's name>
+      e.g. $ssh drax   
+      //vm's name will be "robot@drax", this means success ssh into robot. 
+      //"robot" below means the terminal which already ssh into the robot
+Step 2. Set Network
+      vm: $ifconfig    //get local ip address
+      robot:$ifconfig        //get robot's ip address
+      vm: ① $nano ~/.bashrc
+          ② "option+/" for macos, "alt+/" for windows to jump to last line
+          ③ add
+             "export ROS_MASTER_URI=http://<IP_of_remote_pc>:11311
+              export ROS_HOSTNAME=<IP_of_remote_pc>
+              export TURTLEBOT3_MODEL=waffle
+              alias turtlebot-rviz="rosrun rviz rviz -d 'rospack find turtlebot3_description'/rviz/model.rviz"  "
+          ④ $source ~/.bashrc
+      robot:① $nano ~/.bashrc
+            ② "option+/" for macos, "alt+/" for windows to jump to last line
+            ③ add
+              "export ROS_MASTER_URI=http://<IP_of_remote_pc>:11311
+               export ROS_HOSTNAME=<IP_of_turtlebot>"
+            ④ $source ~/.bashrc
+Step 3. VM:Launch roscore 
+      $roscore
+Step 4. Robot: bringup ---- new terminal
+      $roslaunch turtlebot3_bringup turtlebot3_robot.launch
+Step 5. Sample operations
+      ① VM:Launch keyboard ---- new terminal
+         $roslaunch turtlebot3_teleop turtlebot3_teleop_key.launch
+      ② VM: Launch gmapping ---- new terminal
+         $roslaunch turtlebot3_slam turtlebot3_slam.launch slam_methods:=gmapping
+      ③ VM: Launch realsense camera
+         $roslaunch realsense_camera r200_nodelet_rgbd.launch 
+      ④ Running wall_follow:
+        VM: $roslaunch turtlebot3_bringup turtlebot3_remote.launch
+        Robot: $roslaunch turtlebot3_bringup turtlebot3_robot.launch
+        VM: $roslaunch comp3431_starter wallFollow.launch
+        VM: $cd comp3431_starter/scripts
+            $ python cmd_controller.py
+            TYPE "start"
+                
