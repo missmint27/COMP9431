@@ -1,0 +1,25 @@
+ROS wiki:
+http://wiki.ros.org/pocketsphinx
+ROS sound_play:
+http://wiki.ros.org/sound_play?distro=kinetic
+
+Sphinx Knowledge base tool:
+http://www.speech.cs.cmu.edu/tools/lmtool-new.html
+
+CMU pocketsphinx-org github:
+https://github.com/mikeferguson/pocketsphinx
+
+CMUsphinx-Using PocketSphinx with GStreamer and Python:
+https://cmusphinx.github.io/wiki/gstreamer/
+Differences between Gtk and gi and...libraries:
+https://stackoverflow.com/questions/9667517/gobject-gtk-gnome-gtk-gl-gtk2-gtk3-i-dont-understand/9672426#9672426
+
+ROS how to config CMU pocketsphinx with default package for indigo but on Kinetic:
+https://blog.csdn.net/seeseeatre/article/details/79228816
+http://www.diegorobot.com/wp/?p=555&lang=en
+
+Python speech to text with Pocketsphinx:
+http://blog.justsophie.com/python-speech-to-text-with-pocketsphinx/
+
+Voice free download website:
+http://www.pacdv.com/sounds/voices-1.html
