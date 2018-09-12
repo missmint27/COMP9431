@@ -25,3 +25,7 @@ Voice free download website:
 http://www.pacdv.com/sounds/voices-1.html
 Open Speech repository:
 http://www.voiptroubleshooter.com/open_speech/american.html
+
+Google_cloud_speech API:
+$pip install --upgrade gcloud
+$pip install --upgrade google-api-python-client
